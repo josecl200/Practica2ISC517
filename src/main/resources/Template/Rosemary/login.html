@@ -32,16 +32,7 @@
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="login.html">Iniciar sesion</a></li>
-							<li><a href="Regex.html">Registrar usuarios</a></li>
-							<li><a href="generic.html">manejar inventario</a></li>
-							<li><a href="index.html">Salir</a></li>
-						</ul>
-					</nav>
+				<div th:insert="fragments/nav.html :: menu"></div>
 
 				<!-- Main -->
 					<div id="main">
@@ -54,10 +45,10 @@
 								<h2>Iniciar sesion</h2>
 								<form method="post" action="#">
 									<div class="fields">
-										<div class="field half">
+										<div class="field top">
 											<input type="text" name="user" id="user" placeholder="Usuario" />
 										</div>
-										<div class="field half">
+										<div class="field bottom">
 											<input type="password" name="pass" id="pass" placeholder="Contrasena" />
 										</div>
 									</div>
@@ -70,22 +61,7 @@
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2 th:text="${ping}">Contacto</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li> Copyright &copy; JJ-El Avionsito 2020. All rights reserved.</li>
-							</ul>
-						</div>
-					</footer>
+				<div th:insert="fragments/foot.html :: footer"></div>
 
 			</div>
 
